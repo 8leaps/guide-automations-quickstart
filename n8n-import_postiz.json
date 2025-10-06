@@ -1,0 +1,128 @@
+{
+  "name": "n8n-postiz",
+  "nodes": [
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        0,
+        0
+      ],
+      "id": "f364c739-bfcf-4e28-9869-f3bb01c4387e",
+      "name": "When clicking ‘Execute workflow’"
+    },
+    {
+      "parameters": {
+        "jsCode": "// Get current time\nconst now = new Date();\nconst year = now.getFullYear();\nconst month = String(now.getMonth() + 1).padStart(2, '0');\nconst day = String(now.getDate()).padStart(2, '0');\nconst hours = String(now.getHours()).padStart(2, '0');\nconst minutes = String(now.getMinutes()).padStart(2, '0');\nconst seconds = String(now.getSeconds()).padStart(2, '0');\n\nconst currentTime = `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`;\n\n// Get channel ID from input - the input is the array directly\nconst inputArray = $input.first().json;\nconst channelId = inputArray.id;\n\nreturn [{\n  json: {\n    currentTime: currentTime,\n    channelId: channelId\n  }\n}];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        416,
+        0
+      ],
+      "id": "3180b9f5-28cc-4e2c-befc-2d5e3a4b5846",
+      "name": "Datetime now"
+    },
+    {
+      "parameters": {
+        "operation": "getIntegrations"
+      },
+      "type": "n8n-nodes-postiz.postiz",
+      "typeVersion": 1,
+      "position": [
+        208,
+        0
+      ],
+      "id": "39fe9fc5-c2e0-4273-9d33-dce99b611a3c",
+      "name": "Postiz - Get Channels",
+      "credentials": {
+        "postizApi": {
+          "id": "VFsIOyiCI0AKryon",
+          "name": "Postiz account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "date": "={{ $json.currentTime }}",
+        "posts": {
+          "post": [
+            {
+              "integrationId": "={{ $json.channelId }}",
+              "value": {
+                "contentItem": [
+                  {
+                    "content": "Hello from n8n + postiz"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-postiz.postiz",
+      "typeVersion": 1,
+      "position": [
+        624,
+        0
+      ],
+      "id": "25cbd015-e798-40e8-b8a1-fc004cce6f5a",
+      "name": "Postiz - Create Post",
+      "credentials": {
+        "postizApi": {
+          "id": "VFsIOyiCI0AKryon",
+          "name": "Postiz account"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "When clicking ‘Execute workflow’": {
+      "main": [
+        [
+          {
+            "node": "Postiz - Get Channels",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Datetime now": {
+      "main": [
+        [
+          {
+            "node": "Postiz - Create Post",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Postiz - Get Channels": {
+      "main": [
+        [
+          {
+            "node": "Datetime now",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "43467379-c232-49d5-9792-55da83d4a560",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "62345514558a075c7ba9a0557669c17ca13dccd39ded65e93ae22e1173a5c301"
+  },
+  "id": "svi494JrNWHrIfyC",
+  "tags": []
+}
