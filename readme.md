@@ -22,6 +22,14 @@ When combined, n8n and Postiz create a powerful social media automation system:
 - **Data-Driven Posts**: Pull content from APIs, databases, or external services
 - **Workflow Integration**: Connect your social media strategy with your entire business workflow
 
+## 📹 Video Tutorial
+
+**Watch the complete setup process in action!** 
+
+[![Guide Automations Quickstart Demo](media/guide-automations-quickstart-demo.mp4)](media/guide-automations-quickstart-demo.mp4)
+
+Follow along with the video tutorial above, or use the step-by-step instructions below to get everything up and running in just 10-15 minutes or less!
+
 ## Let's get started
 
 Follow the steps below (Get started now) to get everything up and running in just 10-15 minutes or less!
