@@ -101,7 +101,7 @@ Before starting the services, you need to create a `.env` file with your configu
 ### Step 2: Start Both Services
 
 ```bash
-docker-compose up -d
+docker-compose up --build
 ```
 
 This will start both Postiz and n8n services.
