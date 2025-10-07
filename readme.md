@@ -31,7 +31,7 @@ When combined, n8n and Postiz create a powerful social media automation system:
 > **📺 [Watch on Google Drive](https://drive.google.com/file/d/1qVWlAMbCSYjj2rhHB4cYZFaKBbquN0A2/view?usp=sharing)** - For better control (pause, rewind, full screen) if the GIF is too fast to follow!  
 > *💡 Tip: Right-click the link and select "Open in new tab" to keep this page open while watching*
 
-Follow along with the video tutorial above, or use the step-by-step instructions below to get everything up and running in just 10-15 minutes or less!
+Follow along with the video tutorial above, or use the step-by-step instructions below to get everything up and running in just 5-10 minutes or less!
 
 ## Let's get started
 
