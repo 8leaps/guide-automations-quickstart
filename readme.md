@@ -1,16 +1,16 @@
-# Postiz + n8n Quick Start
+# Automations Quickstart (n8n - Postiz)
 
-Welcome to the Postiz + n8n Quick Start Guide!
+Welcome to the n8n + Postiz Quick Start Guide!
+
+## About n8n 🔄
+
+n8n is a powerful opensource workflow automation tool that allows you to connect all kinds services and create automated workflows without coding. It supports hundreds of integrations (including your own code) and can trigger actions based on various conditions.
 
 ## About Postiz 📅
 
 Postiz gives you the flexibility to schedule your posts in advance across almost ALL social media platforms. You can either self-host or use their cloud service.
 
 This guide applies to both options, but our focus here will be on the self-hosted setup integrated with n8n automation.
-
-## About n8n 🔄
-
-n8n is a powerful workflow automation tool that allows you to connect different services and create automated workflows without coding. It supports hundreds of integrations and can trigger actions based on various conditions.
 
 ## n8n + Postiz 🔥
 
