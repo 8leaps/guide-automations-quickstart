@@ -26,7 +26,9 @@ When combined, n8n and Postiz create a powerful social media automation system:
 
 **Watch the complete setup process in action!** 
 
-[![Guide Automations Quickstart Demo](media/guide-automations-quickstart-demo.mp4)](media/guide-automations-quickstart-demo.mp4)
+![Guide Automations Quickstart Demo](media/guide-automations-quickstart-demo.gif)
+
+> **📺 [Watch on Google Drive](https://drive.google.com/file/d/1qVWlAMbCSYjj2rhHB4cYZFaKBbquN0A2/view?usp=sharing)** - For better control (pause, rewind, full screen) if the GIF is too fast to follow!
 
 Follow along with the video tutorial above, or use the step-by-step instructions below to get everything up and running in just 10-15 minutes or less!
 
